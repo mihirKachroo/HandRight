@@ -2,8 +2,8 @@ import os
 import sys
 from importlib import reload
 from flask import Flask, render_template, redirect, request, url_for, Response
-from camera import VideoCamera
-import camera
+from camera1 import VideoCamera
+import camera1 as camera
 
 # Needed for encoding to utf8
 reload(sys)
