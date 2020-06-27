@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
 
@@ -54,7 +55,6 @@
     </div>
   </nav>
 
-
   <!-- Page Content -->
   {% block content %} {% endblock %}
   <!-- /.container -->
@@ -62,5 +62,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
 </body>
+
 </html>
