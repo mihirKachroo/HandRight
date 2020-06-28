@@ -214,10 +214,8 @@ def game(username):
 # GAMEOVER PAGE
 @app.route('/<username>/gameover', methods=["GET", "POST"])
 def gameover(username):
-
     clear_guesses(username)
     clear_score(username)
-
     rem_attempts = 3
     riddles = riddle()
     riddle_index = 0
