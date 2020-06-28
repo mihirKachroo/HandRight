@@ -1,0 +1,81 @@
+alembic==1.4.2
+argon2-cffi==19.1.0
+bcrypt==3.1.7
+blinker==1.4
+boto3==1.9.66
+botocore==1.12.189
+branca @ file:///home/conda/feedstock_root/build_artifacts/branca_1588860304135/work
+brotlipy==0.7.0
+cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1589982006730/work
+certifi==2020.6.20
+cffi==1.14.0
+chardet==3.0.4
+click==7.1.2
+cryptography==2.9.2
+cycler==0.10.0
+dnspython==1.16.0
+docutils==0.16
+ecdsa==0.13
+email-validator @ file:///home/conda/feedstock_root/build_artifacts/email_validator_1589962946737/work
+Flask==1.1.2
+Flask-Bcrypt==0.7.1
+Flask-Login==0.5.0
+Flask-Mail==0.9.1
+Flask-Migrate==2.4.0
+Flask-SocketIO==4.3.0
+Flask-SQLAlchemy @ file:///home/conda/feedstock_root/build_artifacts/flask-sqlalchemy_1590588246407/work
+Flask-User==1.0.1.5
+Flask-WTF==0.14.3
+folium @ file:///home/conda/feedstock_root/build_artifacts/folium_1588861378954/work
+geographiclib==1.50
+geopy @ file:///home/conda/feedstock_root/build_artifacts/geopy_1589314920058/work
+google-api-core==1.17.0
+google-auth @ file:///home/conda/feedstock_root/build_artifacts/google-auth_1592232565626/work
+google-cloud-vision==0.38.1
+googleapis-common-protos==1.51.0
+grpcio==1.23.0
+idna==2.9
+imutils==0.5.3
+itsdangerous==1.1.0
+Jinja2==2.11.2
+jmespath==0.9.4
+kiwisolver==1.2.0
+Mako==1.1.0
+MarkupSafe==1.1.1
+matplotlib==3.2.2
+mkl-fft==1.1.0
+mkl-random==1.1.0
+mkl-service==2.3.0
+numpy==1.18.1
+olefile==0.46
+opencv-python==4.2.0.34
+pandas==1.0.4
+passlib==1.7.1
+Pillow==7.1.2
+plotly==4.8.1
+protobuf==3.12.3
+psycopg2==2.8.4
+pyasn1==0.4.8
+pyasn1-modules==0.2.7
+pycparser==2.20
+pycryptodome==3.9.7
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+PySocks==1.7.1
+python-dateutil==2.8.1
+python-editor==1.0.4
+python-engineio==3.13.0
+python-socketio==4.6.0
+pytz==2020.1
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1592425495151/work
+retrying==1.3.3
+rsa @ file:///home/conda/feedstock_root/build_artifacts/rsa_1591996208734/work
+s3transfer==0.1.13
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+SQLAlchemy @ file:///D:/bld/sqlalchemy_1589421283037/work
+stripe==2.36.2
+urllib3==1.25.9
+Werkzeug==1.0.1
+win-inet-pton==1.1.0
+wincertstore==0.2
+WTForms==2.3.1
