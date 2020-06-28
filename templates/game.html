@@ -60,8 +60,28 @@
         bottom: 30px;
         font-size: 17px;
       }
+      #snackbar2 {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+      }
 
       #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+      #snackbar2.show {
         visibility: visible;
         -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -190,21 +210,18 @@
             <input type="text" class="form-control" name="answer" id="answer" autofocus>
             <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
             <br>
-            <button class="btn btn-dark hvr-round-corners">send</button>
+            <button class="btn btn-dark hvr-round-corners" onclick="myFunction()">send</button>
           </form>
         </div>
 
-
-        
-        <!-- <button onclick="myFunction()">Failure Button</button> -->
-        <div id="snackbar">Wrong Answer! Try Again.</div>
         <script>
           function myFunction() {
-            var x = document.getElementById("snackbar");
-            x.className = "show";
-            setTimeout(function () {
-              x.className = x.className.replace("show", "");
-            }, 3000);
+              var x = document.getElementById("snackbar");
+              x.className = "show";
+              setTimeout(function () {
+                x.className = x.className.replace("show", "");
+              }, 9000);
+            
           }
         </script>
 
@@ -289,6 +306,9 @@
 
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/active.js') }}"></script>
+    
+    <div id="snackbar">Right Answer! Great Job.</div>
+
   </body>
 </html>
 
