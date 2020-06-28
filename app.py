@@ -2,8 +2,8 @@ import os
 import sys
 from importlib import reload
 from flask import Flask, render_template, redirect, request, url_for, Response
-from camera1 import VideoCamera
-import camera1 as camera
+from camera import VideoCamera
+import camera as camera
 
 # Needed for encoding to utf8
 reload(sys)
@@ -12,6 +12,8 @@ app = Flask(__name__)
 app.secret_key = 'some_secret'
 data = []
 
+words = ""
+username = ""
 
 def write_to_file(filename, data):
     with open(filename, "a+") as file:
@@ -134,8 +136,11 @@ def gen(camera):
         else:
             print("Text: ", frame[2])
             finalAnswer="right"
-            return (b'--frame\r\n'
-                b'Content-Type: image/jpeg\r\n\r\n' + frame[0] + b'\r\n\r\n')
+            words = frame[2]
+            # break
+            # return (b'--frame\r\n'
+            #     b'Content-Type: image/jpeg\r\n\r\n' + frame[0] + b'\r\n\r\n')
+    # redirect("/")
 
 @app.route('/video_feed')
 def video_feed():
@@ -175,7 +180,6 @@ def game(username):
         user_response = request.form["answer"].title()
 
         write_to_file("data/user-" + username + "-guesses.txt", user_response + "\n")
-
         # Compare the user's answer to the correct answer of the riddle
         if finalAnswer=="right":
             print("here2")
