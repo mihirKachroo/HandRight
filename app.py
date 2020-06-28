@@ -163,11 +163,10 @@ def user(username):
     return render_template("welcome.html",
                             username=username)
 
-
 # GAME PAGE
 @app.route('/<username>/game', methods=["GET", "POST"])
 def game(username):
-    print("here")
+
     remaining_attempts = 3
     riddles = riddle()
     riddle_index = 0
@@ -180,21 +179,28 @@ def game(username):
         user_response = request.form["answer"].title()
 
         write_to_file("data/user-" + username + "-guesses.txt", user_response + "\n")
+
         # Compare the user's answer to the correct answer of the riddle
-        if finalAnswer=="right":
-            print("here2")
+        if answers[riddle_index] == user_response:
+            # Correct answer
             if riddle_index < 9:
+                # If riddle number is less than 10 & answer is correct: add score, clear wrong answers file and go to next riddle
                 write_to_file("data/user-" + username + "-score.txt", str(add_to_score()) + "\n")
                 clear_guesses(username)
                 riddle_index += 1
             else:
+                # If right answer on LAST riddle: add score, submit score to highscore file and redirect to congrats page
                 write_to_file("data/user-" + username + "-score.txt", str(add_to_score()) + "\n")
                 final_score(username)
                 return redirect(url_for('congrats', username=username, score=end_score(username)))
+
         else:
+            # Incorrect answer
             if attempts_remaining() > 0:
+                # if answer was wrong and more than 0 attempts remaining, reload current riddle
                 riddle_index = riddle_index
             else:
+                # If all attempts are used up, redirect to Gameover page
                 return redirect(url_for('gameover', username=username))
 
     return render_template("game.html",
