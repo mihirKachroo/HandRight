@@ -130,14 +130,14 @@
       </div>
 
       <!-- Banner Section -->
-      <section class="hero-area" style = "height:200vh;">
+      <section class="hero-area" style = "height:110vh;">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-10">
               <div class="hero-content">
                 <h5
                   class="title"
-                  style="margin-bottom: 20px; margin-top: -30px;"
+                  style="margin-bottom: 10px; margin-top: -30px;"
                 >
                   Question {{riddle_index + 1}}:
                 </h5>
@@ -145,6 +145,10 @@
                 <h1 class="title" style="font-size: 150px;">
                   {{ riddles[riddle_index] }}
                 </h1>
+                <div class="col-md-12">
+                  <h4>Attempts remaining: {{remaining_attempts}}</h4>
+                </div>
+            
 
                 <!-- <form method="POST" class="form-actual">
                   <div class="hero-btn">
@@ -207,7 +211,7 @@
       </div>
 
       <!-- Footer Section -->
-      <footer class="section-padding-top footer-bg shape-holder" style="height:10vh;">
+      <footer class="section-padding-top footer-bg shape-holder" style="height:2vh;">
         © 2020 Team. All rights reserved
         <div class="container">
           <div class="copyright-area pt--60 pt-md--80 pb--40">
