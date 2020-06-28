@@ -210,7 +210,7 @@
             <input type="text" class="form-control" name="answer" id="answer" value = {{response}} autofocus>
             <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
             <br>
-            <button class="btn btn-dark hvr-round-corners" onclick="myFunction()">send</button>
+            <button class="btn btn-dark hvr-round-corners">send</button>
           </form>
         </div>
 
@@ -307,7 +307,6 @@
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/active.js') }}"></script>
     
-    <div id="snackbar">Right Answer! Great Job.</div>
 
   </body>
 </html>
