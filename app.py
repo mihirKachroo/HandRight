@@ -259,5 +259,5 @@ def highscores():
     return render_template("highscores.html", page_title="Highscores", usernames_and_scores=usernames_and_scores)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
