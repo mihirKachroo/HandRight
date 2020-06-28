@@ -125,6 +125,7 @@ def correct():
 finalAnswer ="wrong"
 
 def gen(camera):
+    global words
     print("working")
     while True:
         frame = camera.get_frame()
@@ -166,6 +167,7 @@ def user(username):
 # GAME PAGE
 @app.route('/<username>/game', methods=["GET", "POST"])
 def game(username):
+    global words
 
     remaining_attempts = 3
     riddles = riddle()
@@ -205,7 +207,8 @@ def game(username):
 
     return render_template("game.html",
                             username=username, riddle_index=riddle_index, riddles=riddles,
-                            answers=answers, attempts=store_all_attempts(username), remaining_attempts=attempts_remaining(), score=end_score(username))
+                            answers=answers, attempts=store_all_attempts(username), remaining_attempts=attempts_remaining(), score=end_score(username),
+                            response=words)
 
 
 # GAMEOVER PAGE
