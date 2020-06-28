@@ -374,7 +374,10 @@ def detect_text(path):
             '{}\nFor more info on error messages, check: '
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))
-    return texts[0].description.replace('\n', " ")
+    if texts[0].description:
+        return texts[0].description.replace('\n', " ")
+    else:
+        return None
     # [END vision_python_migration_text_detection]
 # [END vision_text_detection]
 
